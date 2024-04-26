@@ -31,7 +31,8 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
         "fixed inset-x-4 top-5 z-[49] mx-auto flex max-w-2xl items-center justify-between overflow-hidden rounded-full border border-neutral-950 border-opacity-[0.03] bg-neutral-50/75 px-3 py-2 filter backdrop-blur-xl dark:border-white/5 dark:bg-neutral-900/75",
         className
       )}>
-      <div className="hidden md:flex">
+      <p>CHOCOS</p>
+      <div className="hidden md:flex ">
         {navItems.map((navItem, idx: number) => {
           const isActive = pathname === navItem.link;
           return (
@@ -78,7 +79,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
         <MobileNavigation navItems={navItems} />
       </div>
 
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
     </motion.div>
   );
 };

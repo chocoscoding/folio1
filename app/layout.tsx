@@ -9,11 +9,12 @@ import "./globals.css";
 const epilogue = Epilogue({ subsets: ["latin"] });
 
 const metainfo = {
-  name: "Oliver Cederborg",
-  description: "Full-stack developer and designer from Copenhagen, Denmark.",
-  url: "https://olivercederborg.com",
+  name: "Oyeti Oluwatimileyin - chocoscoding",
+  description: "Full-stack web developer from Nigeria with 4 years in building functional and scalable web apps/sites.",
+  url: "https://chocoscoding.tech",
   image: "/meta/meta.png",
-  twitter: "@olivercederborg",
+  twitter: "@chocoscoding",
+  linkedin: "@timio",
 };
 
 export const metadata: Metadata = {
@@ -49,10 +50,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("bg-neutral-100 text-neutral-700 dark:bg-neutral-950 dark:text-neutral-300", epilogue.className)}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <section className="container flex min-h-screen max-w-2xl flex-col">
             <Header />
-            <main className="flex flex-1 flex-col pb-20 pt-40 md:pt-48">{children}</main>
+            <main className="flex flex-1 flex-col pb-20 pt-40 md:pt-40 ">{children}</main>
             <Footer />
           </section>
         </ThemeProvider>
