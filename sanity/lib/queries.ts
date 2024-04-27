@@ -1,4 +1,5 @@
 import { groq } from "next-sanity";
+import { client } from "./client";
 
 // Get all posts
 export const postsQuery = groq`*[_type == "post"] {
@@ -30,3 +31,22 @@ export const experienceQuery = groq`*[_type == 'experiences']{
     order,
     company
   }`;
+
+// Get a all experience
+export const projectsQuery = groq`*[_type == 'project'] | order(order desc) {
+  github,
+  "imageUrl": mainImage.asset->url,
+  site,
+  order,
+}`;
+
+export async function getProjects() {
+  return client.fetch(
+    groq`*[_type == 'project'] | order(order desc) {
+      github,
+      "imageUrl": mainImage.asset->url,
+      site,
+      order,
+    }`
+  );
+}

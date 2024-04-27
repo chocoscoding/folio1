@@ -5,7 +5,8 @@ import { WorkShell } from "../experience/components/work-shell";
 import { defaultVariants } from "@/components/motion.variants";
 import { AnimatePresence, MotionProps, motion } from "framer-motion";
 import { Heading } from "@/components/heading";
-
+import { FC } from "react";
+import { ProjectType } from "@/types/projects";
 export const staggerVariant = {
   hidden: { opacity: 0, y: 30 },
   shown: {
@@ -19,7 +20,7 @@ export const staggerVariant = {
   },
   leave: { opacity: 0, y: -30 },
 };
-const Projects = () => {
+const Projects: FC<{ data: ProjectType[] }> = (props) => {
   return (
     <>
       <Heading className="mb-1 mt-0">My Projects</Heading>
@@ -27,16 +28,14 @@ const Projects = () => {
       <WorkShell initial="hidden" animate="visible" variants={defaultVariants}>
         <AnimatePresence>
           <motion.div initial="hidden" animate="shown" exit="hidden" variants={staggerVariant} className="grid grid-cols-2 gap-3 ">
-            {Array(20)
-              .fill(0)
-              .map((_, index) => {
-                if ((index + 1) % 2 === 0) {
-                  //even no
-                  return <ProjectNode2 key={index} />;
-                }
-                //odd no
-                return <ProjectNode1 key={index} />;
-              })}
+            {props.data.map((data, index) => {
+              if ((index + 1) % 2 === 0) {
+                //even no
+                return <ProjectNode2 {...data} key={index} />;
+              }
+              //odd no
+              return <ProjectNode1 {...data} key={index} />;
+            })}
           </motion.div>
         </AnimatePresence>
       </WorkShell>
