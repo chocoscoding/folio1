@@ -43,6 +43,7 @@ export const projectsQuery = groq`*[_type == 'project'] | order(order desc) {
 export async function getProjects() {
   return client.fetch(
     groq`*[_type == 'project'] | order(order desc) {
+      title,
       github,
       "imageUrl": mainImage.asset->url,
       site,

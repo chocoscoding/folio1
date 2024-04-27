@@ -7,7 +7,7 @@ import { staggerVariant } from "../Projects";
 import { ProjectType } from "@/types/projects";
 import { FC } from "react";
 import Link from "next/link";
-const ProjectNode1: FC<ProjectType> = ({ github, site, imageUrl }) => {
+const ProjectNode1: FC<ProjectType> = ({ github, site, imageUrl, title }) => {
   return (
     <motion.div
       variants={staggerVariant}
@@ -17,6 +17,7 @@ const ProjectNode1: FC<ProjectType> = ({ github, site, imageUrl }) => {
       <div className="relative rounded-md h-full overflow-hidden">
         <Image src={imageUrl} fill alt="" className="select-none transition-all group-hover:scale-110 object-cover object-top" />
       </div>
+      <p className="font-normal text-xl mt-1">{title}</p>
       <div className="mt-2 gap-2 flex mb-1">
         {github ? (
           <Button asChild variant={"outline"} className="w-full bg-transparent border-2 flex justify-center gap-1 items-center">

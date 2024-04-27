@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { staggerVariant } from "../Projects";
 import { FC } from "react";
 import { ProjectType } from "@/types/projects";
-const ProjectNode2: FC<ProjectType> = ({ github, site, imageUrl }) => {
+const ProjectNode2: FC<ProjectType> = ({ github, site, imageUrl, title }) => {
   return (
     <motion.div
       variants={staggerVariant}
@@ -24,6 +24,7 @@ const ProjectNode2: FC<ProjectType> = ({ github, site, imageUrl }) => {
           alt="image"
         />
       </div>
+      <p className="font-normal text-xl mt-1">{title}</p>
       <div className="mt-2 gap-2 flex mb-1">
         {github ? (
           <Button asChild variant={"outline"} className="w-full bg-transparent border-2 flex justify-center gap-1 items-center">
