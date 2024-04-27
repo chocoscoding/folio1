@@ -22,14 +22,17 @@ export async function Cards() {
         },
       }}>
       <section className="mt-8 grid grid-cols-8 grid-rows-5 gap-4 md:grid-cols-7 md:grid-rows-3">
-        <LocationCard />
         <MeCard />
         <GithubStatsCard followers={followers} stars={stars} contributions={contributions} />
+        <TimeCard />
+        <LocationCard />
         <LinkedInCard />
         <DevTo />
         <CV />
-        <TimeCard />
       </section>
     </Motion>
   );
 }
+/*
+
+*/

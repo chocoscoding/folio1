@@ -24,7 +24,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
       }}
       transition={{
         duration: 0.35,
-        delay: 0.25,
+        delay: 0.15,
         ease: "backOut",
       }}
       className={cn(

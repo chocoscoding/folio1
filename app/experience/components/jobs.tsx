@@ -66,7 +66,7 @@ export function JobCard({ job, index, ...props }: JobCardProps) {
     <motion.div
       variants={defaultVariantsNoDelay}
       className={cn(
-        "card-border relative flex flex-col rounded-xl bg-white p-6 py-8 transition-colors duration-200 ease-in-out dark:bg-neutral-900",
+        "card-border relative w-full flex flex-col rounded-xl bg-white p-6 py-8 transition-colors duration-200 ease-in-out dark:bg-neutral-900",
         {
           "ring-1 ring-neutral-200 ring-offset-8 ring-offset-neutral-100 dark:ring-neutral-500/20 dark:ring-offset-neutral-950": currentJob,
         }
