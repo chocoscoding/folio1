@@ -5,19 +5,22 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const epilogue = Epilogue({ subsets: ["latin"] });
 
 const metainfo = {
-  name: "Oyeti Oluwatimileyin - chocoscoding",
+  name: "Oyeti Oluwatimileyin - CHOCOS",
   description: "Full-stack web developer from Nigeria with 4 years in building functional and scalable web apps/sites.",
   url: "https://chocoscoding.tech",
   image: "/meta/meta.png",
   twitter: "@chocoscoding",
   linkedin: "@timio",
+  favicon: "/icon.ico",
 };
 
 export const metadata: Metadata = {
+  icons: metainfo.favicon,
   metadataBase: new URL(metainfo.url),
   title: metainfo.name,
   description: metainfo.description,
@@ -50,6 +53,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn("bg-neutral-100 text-neutral-700 dark:bg-neutral-950 dark:text-neutral-300", epilogue.className)}>
+        <Head>
+          <link rel="icon" href="icon.ico" sizes="any" />
+        </Head>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <section className="container flex min-h-screen max-w-2xl flex-col">
             <Header />

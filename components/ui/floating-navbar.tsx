@@ -3,7 +3,6 @@
 import * as React from "react";
 import { type NavItem } from "@/components/layouts/header";
 import { MobileNavigation } from "@/components/mobile-navigation";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
