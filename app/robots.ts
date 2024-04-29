@@ -5,9 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
     },
-    sitemap: "https://chocoscoding.tech/sitemap.xml",
-    host: "https://chocoscoding.tech",
+    sitemap: "https://www.chocoscoding.tech/sitemap.xml",
+    host: "https://www.chocoscoding.tech",
   };
 }
