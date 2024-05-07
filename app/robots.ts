@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.chocoscoding.tech/sitemap.xml",
-    host: "https://www.chocoscoding.tech",
+    sitemap: "https://chocoscoding.tech/sitemap.xml",
+    host: "https://chocoscoding.tech",
   };
 }

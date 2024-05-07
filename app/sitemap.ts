@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map(({ url, ...rest }) => ({
     ...rest,
-    url: `https://www.chocoscoding.tech${url}`,
+    url: `https://chocoscoding.tech${url}`,
     lastModified: new Date(),
   }));
 }
