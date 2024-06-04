@@ -115,12 +115,12 @@ const Index = () => {
 
                 <h1 className="text-xl text-black font-medium my-3">{title}</h1>
 
-                <div className=" text-black/70 mb-1">
+                <div className=" text-black/70 mb-2 mt-1">
                   <PortableText value={description} />
                 </div>
 
                 <div className="flex flex-wrap my-3 gap-2.5">
-                  {techStack.map((tech, i) => (
+                  {(techStack || []).map((tech, i) => (
                     <p key={"techStack" + i} className="px-1.5 py-.5 outline outline-2 outline-black rounded-full text-sm text-black">
                       {tech}
                     </p>
