@@ -7,40 +7,54 @@ import { motion } from "framer-motion";
 import { staggerVariant } from "../Projects";
 import { FC } from "react";
 import { ProjectType } from "@/types/projects";
-const ProjectNode2: FC<ProjectType> = ({ github, site, imageUrl, title }) => {
+import ProjectDetails from "@/lib/ProjectDetailsStore";
+import { useStore } from "zustand";
+
+const ProjectNode2: FC<ProjectType> = (props) => {
+  const { site, imageUrl, title } = props;
+
+  const { toggle, sendPayload } = useStore(ProjectDetails);
+
+  const showMoreInfo = () => {
+    sendPayload(props);
+    toggle(true);
+  };
+
   return (
     <motion.div
       variants={staggerVariant}
       whileInView={"shown"}
       initial="hidden"
-      className="group flex flex-col col-start-1 col-span-2 md:col-start-2 md:col-span-1 h-[18rem] bg-neutral-500/20 rounded-md relative p-1">
-      <div className="relative rounded-md h-full overflow-hidden">
+      className="group flex flex-col col-start-1 col-span-2 md:col-start-2 md:col-span-1 h-[18rem] bg-neutral-500/20 rounded-lg relative outline outline-2 outline-neutral-500/20">
+      <div className="relative rounded-t-lg  h-full overflow-hidden">
         <Image
           src={imageUrl}
           className="select-none transition-all group-hover:scale-110 object-cover object-top"
           fill
+          fetchPriority="high"
           loading="eager"
           priority
           alt="image"
         />
       </div>
-      <p className="font-normal text-xl mt-1">{title}</p>
-      <div className="mt-2 gap-2 flex mb-1">
-        {github ? (
-          <Button asChild variant={"outline"} className="w-full bg-transparent border-2 flex justify-center gap-1 items-center">
-            <Link target="_blank" href={github}>
-              Github <GitHubLogoIcon />
-            </Link>
+      <div className="px-1 py-0.5">
+        <p className="font-light text-lg mt-1">{title}</p>
+        <div className="mt-2 gap-2 flex mb-1">
+          <Button
+            variant={"outline"}
+            className="w-fit bg-transparent border-2 flex justify-center gap-1 items-center"
+            onClick={showMoreInfo}>
+            More Info
           </Button>
-        ) : null}
-        {site ? (
-          <Button asChild className="w-full flex justify-center gap-1 items-center">
-            <Link target="_blank" href={site}>
-              View Site
-              <ArrowUpRight />
-            </Link>
-          </Button>
-        ) : null}
+          {site ? (
+            <Button asChild className="w-fit flex justify-center gap-1 items-center rounded-lg">
+              <Link target="_blank" href={site}>
+                Site
+                <ArrowUpRight />
+              </Link>
+            </Button>
+          ) : null}
+        </div>
       </div>
     </motion.div>
   );

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
-
+import ProjectDetails from "@/components/ProjectDetails";
 const epilogue = Epilogue({ subsets: ["latin"] });
 
 const metainfo = {
@@ -15,7 +15,7 @@ const metainfo = {
   url: "https://chocoscoding.tech",
   image: "/meta/meta.png",
   twitter: "@chocoscoding",
-  linkedin: "@timio",
+  linkedin: "@timileyinoyeti",
   favicon: "/icon.ico",
 };
 
@@ -57,7 +57,8 @@ export default function RootLayout({
           <link rel="icon" href="icon.ico" sizes="any" />
         </Head>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          <section className="container flex min-h-screen max-w-2xl flex-col">
+          <ProjectDetails />
+          <section className="container flex min-h-screen max-w-[43rem] flex-col">
             <Header />
             <main className="flex flex-1 flex-col pb-20 pt-40 md:pt-40 ">{children}</main>
             <Footer />

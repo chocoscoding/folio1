@@ -48,6 +48,9 @@ export async function getProjects() {
       "imageUrl": mainImage.asset->url,
       site,
       order,
+      techStack,
+      description,
+      "otherImages": coalesce(images[].asset->url, [])
     }`
   );
 }
