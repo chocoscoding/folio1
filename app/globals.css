@@ -91,3 +91,12 @@
   display: inline-block;
   transform-origin: 70% 70%;
 }
+
+.bd-blur-xl {
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+.bd-blur {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}

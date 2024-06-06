@@ -27,7 +27,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: NavItem[]; clas
         ease: "backOut",
       }}
       className={cn(
-        "fixed inset-x-4 top-5 z-[49] mx-auto flex max-w-[43rem] items-center justify-between overflow-hidden rounded-full border border-neutral-950 border-opacity-[0.03] bg-neutral-50/75 px-3 py-2 filter backdrop-blur-xl dark:border-white/5 dark:bg-neutral-900/75",
+        "fixed inset-x-4 top-5 z-[49] mx-auto flex max-w-[43rem] items-center justify-between overflow-hidden rounded-full border border-neutral-950 border-opacity-[0.03] bg-neutral-50/75 px-3 py-2 filter bd-blur-xl dark:border-white/5 dark:bg-neutral-900/75",
         className
       )}>
       <p>CHOCOS</p>

@@ -69,9 +69,9 @@ const Index = () => {
             animate="shown"
             exit="leave"
             variants={sectionVariant}
-            className="w-full h-full fixed top-0 left-0 backdrop-blur-xl bg-transparent z-[1000] flex flex-col items-center overflow-y-auto ">
+            className="w-full h-full fixed top-0 left-0 bd-blur-xl bg-transparent z-[1000] flex flex-col items-center overflow-y-auto ">
             <button
-              className="rounded-full bg-white/10 backdrop-blur p-2 mt-[20px] mb-[1.5%] outline outline-2 outline-neutral-600"
+              className="rounded-full bg-white/10 bd-blur p-2 mt-[20px] mb-[1.5%] outline outline-2 outline-neutral-600"
               onClick={hideMoreInfo}>
               <IoClose size={25} opacity={50} />
             </button>

@@ -23,8 +23,6 @@ export const staggerVariant = {
 const Projects: FC<{ data: ProjectType[] }> = (props) => {
   return (
     <>
-      <Heading className="mb-1 mt-0">My Projects</Heading>
-      <p className="mb-6 mt-6 text-xl">{`A selected few of my works`}</p>
       <WorkShell initial="hidden" animate="visible" variants={defaultVariants}>
         <AnimatePresence>
           <motion.div initial="hidden" animate="shown" exit="hidden" variants={staggerVariant} className="grid grid-cols-2 gap-5 ">
