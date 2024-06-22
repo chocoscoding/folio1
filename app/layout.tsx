@@ -43,6 +43,17 @@ export const metadata: Metadata = {
     creator: metainfo.twitter,
     images: metainfo.image,
   },
+  keywords: [
+    "web developer",
+    "full-stack developer",
+    "software engineer",
+    "react developer",
+    "nextjs developer",
+    "chocos",
+    "chocoscoding",
+    "timileyin",
+    "timileyin oyeti",
+  ],
 };
 
 export default function RootLayout({
