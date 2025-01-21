@@ -9,4 +9,5 @@ export type ProjectType = {
   techStack: Array<string>;
   otherImages: Array<string>;
   description: TypedObject;
+  nodeType: '1'|'2'; //node type
 };

@@ -119,9 +119,9 @@ const Index = () => {
                   <PortableText value={description} />
                 </div>
 
-                <div className="flex flex-wrap my-3 gap-2.5">
+                <div className="flex flex-wrap my-5 gap-2.5">
                   {(techStack || []).map((tech, i) => (
-                    <p key={"techStack" + i} className="px-1.5 py-.5 outline outline-2 outline-black rounded-full text-sm text-black">
+                    <p key={"techStack" + i} className="px-2 py-1 outline outline-2 outline-black rounded-full text-sm text-black">
                       {tech}
                     </p>
                   ))}
@@ -132,7 +132,7 @@ const Index = () => {
                     <Button
                       asChild
                       variant={"outline"}
-                      className="w-full min-w-[130px] max-w-[160px] h-10 border-2 flex justify-center gap-1 items-center rounded-lg outline outline-2 outline-white/95">
+                      className="w-full min-w-[130px] max-w-[160px] h-10 border-2 flex justify-center gap-1 items-center rounded-lg outline outline-2 outline-white/95 hover:bg-white hover:outline-neutral-900 hover:text-neutral-900 transition-all">
                       <Link target="_blank" href={github}>
                         Github Repo
                         <GitHubLogoIcon />
@@ -142,7 +142,7 @@ const Index = () => {
                   {site ? (
                     <Button
                       asChild
-                      className="w-full h-10 min-w-[130px] max-w-[160px] flex justify-center gap-1 items-center rounded-lg outline outline-2 outline-neutral-900">
+                      className="w-full h-10 min-w-[130px] max-w-[160px] flex justify-center gap-1 items-center rounded-lg outline outline-2 outline-neutral-900 hover:text-white hover:bg-neutral-900 transition-all">
                       <Link target="_blank" href={site}>
                         Go to website
                         <ArrowUpRight />

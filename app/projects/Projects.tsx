@@ -1,6 +1,5 @@
 "use client";
-import ProjectNode1 from "./components/ProjectNode1";
-import ProjectNode2 from "./components/ProjectNode2";
+import ProjectNode from "./components/ProjectNode";
 import { WorkShell } from "../experience/components/work-shell";
 import { defaultVariants } from "@/components/motion.variants";
 import { AnimatePresence, MotionProps, motion } from "framer-motion";
@@ -27,12 +26,7 @@ const Projects: FC<{ data: ProjectType[] }> = (props) => {
         <AnimatePresence>
           <motion.div initial="hidden" animate="shown" exit="hidden" variants={staggerVariant} className="grid grid-cols-2 gap-5 ">
             {props.data.map((data, index) => {
-              if ((index + 1) % 2 === 0) {
-                //even no
-                return <ProjectNode2 {...data} key={index} />;
-              }
-              //odd no
-              return <ProjectNode1 {...data} key={index} />;
+              return <ProjectNode {...data} key={index} nodeType={(index + 1) % 2 === 0 ? "2" : "1"} />;
             })}
           </motion.div>
         </AnimatePresence>

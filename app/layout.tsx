@@ -12,7 +12,7 @@ const epilogue = Epilogue({ subsets: ["latin"] });
 const metainfo = {
   name: "Oyeti Oluwatimileyin - CHOCOS",
   description: "Full-stack web developer from Nigeria with 4 years in building functional and scalable web apps/sites.",
-  url: "https://chocoscoding.tech",
+  url: "https://chocos.vercel.app",
   image: "/meta/meta.png",
   twitter: "@chocoscoding",
   linkedin: "@timileyinoyeti",
