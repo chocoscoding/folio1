@@ -8,7 +8,7 @@ import { Heading } from "@/components/heading";
 const page = async () => {
   const fetchProjectsWithDelay = async () => {
     try {
-      const projects = (await getProjects()) ?? [];
+      const projects = await getProjects();
       return projects;
     } catch (error) {
       return [];
