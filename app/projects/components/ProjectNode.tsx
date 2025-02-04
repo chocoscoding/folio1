@@ -9,6 +9,7 @@ import { FC } from "react";
 import Link from "next/link";
 import ProjectDetails from "@/lib/ProjectDetailsStore";
 import { useStore } from "zustand";
+
 const ProjectNode: FC<ProjectType> = (props) => {
   const { site, imageUrl, title, nodeType } = props;
 
@@ -16,7 +17,9 @@ const ProjectNode: FC<ProjectType> = (props) => {
 
   const showMoreInfo = () => {
     if (nodeType === "1") {
-      document.documentElement.style.overflow = "hidden";
+      if (document) {
+        document.documentElement.style.overflow = "hidden";
+      }
     }
     sendPayload(props);
     toggle(true);
