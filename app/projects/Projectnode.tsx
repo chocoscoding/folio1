@@ -17,7 +17,7 @@ const ProjectNode: FC<ProjectType> = (props) => {
 
   const showMoreInfo = () => {
     if (nodeType === "1") {
-      if (document) {
+      if (typeof document !== "undefined") {
         document.documentElement.style.overflow = "hidden";
       }
     }
@@ -35,7 +35,7 @@ const ProjectNode: FC<ProjectType> = (props) => {
       }`}>
       <div className="relative rounded-t-lg  h-full overflow-hidden">
         <Image
-          src={imageUrl}
+          src={imageUrl || ""}
           fetchPriority="high"
           loading="eager"
           priority

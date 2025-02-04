@@ -5,6 +5,7 @@ import { AnimatePresence, MotionProps, motion } from "framer-motion";
 import { FC } from "react";
 import { ProjectType } from "@/types/projects";
 import ProjectNode from "./Projectnode";
+
 export const staggerVariant = {
   hidden: { opacity: 0, y: 30 },
   shown: {
