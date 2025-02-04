@@ -6,18 +6,15 @@ import { ProjectType } from "@/types/projects";
 import { Heading } from "@/components/heading";
 
 const page = async () => {
-  const fetchProjectsWithDelay = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(async () => {
-        try {
-          const projects = await getProjects();
-          resolve(projects);
-        } catch (error) {
-          reject(error);
-        }
-      }, 5000); // Delay of 5 seconds
-    });
+  const fetchProjectsWithDelay = async () => {
+    try {
+      const projects = await getProjects();
+      return projects;
+    } catch (error) {
+      return [];
+    }
   };
+
   const allProjects: ProjectType[] = (await fetchProjectsWithDelay()) as ProjectType[];
 
   if (!getProjects) {
