@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { staggerVariant } from "../Projects";
+import { staggerVariant } from "./Projects";
 import { ProjectType } from "@/types/projects";
 import { FC } from "react";
 import Link from "next/link";

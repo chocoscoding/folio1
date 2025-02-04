@@ -1,10 +1,10 @@
 "use client";
-import ProjectNode from "./components/ProjectNode";
 import { WorkShell } from "../experience/components/work-shell";
 import { defaultVariants } from "@/components/motion.variants";
 import { AnimatePresence, MotionProps, motion } from "framer-motion";
 import { FC } from "react";
 import { ProjectType } from "@/types/projects";
+import ProjectNode from "./Projectnode";
 export const staggerVariant = {
   hidden: { opacity: 0, y: 30 },
   shown: {
