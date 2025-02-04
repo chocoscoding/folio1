@@ -11,7 +11,7 @@ export default function Home() {
 
       <section className="prose prose-neutral mt-8 max-w-full dark:prose-invert">
         <Text>
-          I&apos;m a developer driven by crafting beautiful, scalable, and functional applications. With over 3 years in the tech industry,
+          I&apos;m a developer driven by crafting beautiful, scalable, and functional applications. With over 4 years in the tech industry,
           I bring a strong foundation and experties to craft to every project.
           <br />
           My tech stacks include

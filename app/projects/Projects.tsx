@@ -3,7 +3,6 @@ import ProjectNode from "./components/ProjectNode";
 import { WorkShell } from "../experience/components/work-shell";
 import { defaultVariants } from "@/components/motion.variants";
 import { AnimatePresence, MotionProps, motion } from "framer-motion";
-import { Heading } from "@/components/heading";
 import { FC } from "react";
 import { ProjectType } from "@/types/projects";
 export const staggerVariant = {
