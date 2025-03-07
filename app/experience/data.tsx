@@ -8,15 +8,26 @@ export type Job = {
 };
 
 export const bbt: Job = {
+  company: "Remote Worldwide",
+  position: "Full-stack Developer",
+  introDescription: (
+    <span className=" italic">
+      I am working at RWW, where we a building a hiring and job search platform which fosters Worldwide remote work.
+    </span>
+  ),
+  from: "2024",
+  to: "2025",
+};
+export const bbt: Job = {
   company: "Beauty By Tolu",
   position: "Full-stack Developer (contract)",
   introDescription: (
     <span className=" italic">
-      I currently work at <a>Beauty By Tolu</a>, where I help build and maintain our web application for our hair booking web app.
+      I worked at <a>Beauty By Tolu</a>, where I help build and maintain our web application for our hair booking web app.
     </span>
   ),
   from: "2023",
-  to: "2023",
+  to: "2024",
 };
 
 export const hypercho: Job = {

@@ -1,6 +1,6 @@
 "use client";
 
-import { bbt, freelance, hypercho, osl, type Job } from "@/app/experience/data";
+import { bbt, freelance, hypercho, osl,rww, type Job } from "@/app/experience/data";
 import { defaultVariantsNoDelay } from "@/components/motion.variants";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,7 +9,7 @@ import { AnimatePresence, MotionProps, motion } from "framer-motion";
 import { ArrowDown, MoveDown } from "lucide-react";
 import React from "react";
 
-const jobs: Job[] = [bbt, hypercho, osl, freelance];
+const jobs: Job[] = [rww,bbt, hypercho, osl, freelance];
 
 export function Jobs() {
   return (
