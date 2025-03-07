@@ -59,9 +59,9 @@ export const freelance: Job = {
   position: "Frontend Developer",
   introDescription: (
     <span className=" italic">
-      I worked freelance as a frontend developer on sites like <a>upwork</a> and <a>fiverr</a>.
+      I work freelance as a fullstack creative developer on platforms like <a>upwork</a> and <a>fiverr</a>.
     </span>
   ),
   from: "2019",
-  to: "2021",
+  to: "Present",
 };
