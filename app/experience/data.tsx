@@ -7,7 +7,7 @@ export type Job = {
   to: string;
 };
 
-export const bbt: Job = {
+export const rww: Job = {
   company: "Remote Worldwide",
   position: "Full-stack Developer",
   introDescription: (
